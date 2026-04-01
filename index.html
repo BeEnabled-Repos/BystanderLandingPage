@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bystander by 119 — Join the Waitlist</title>
+    <meta name="description" content="Sign up for the Bystander by 119 waitlist. Get fast, simple support in emergencies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-inner">
+            <img src="../BystanderLogo.svg" alt="" class="logo-icon" width="60" height="60">
+            <img src="../BystanderLogoText.svg" alt="Bystander by 119" class="logo-text" width="200" height="48">
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <h1 id="hero-heading">Your information, ready when it matters most</h1>
+                <p class="hero-sub">Bystander by 119 is a free digital alert that lets someone nearby see your important information and get you the right help — even if you can't speak for yourself.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works" aria-labelledby="how-heading">
+            <div class="container">
+                <h2 id="how-heading">How It Works</h2>
+                <ol class="steps">
+                    <li>
+                        <span class="step-number" aria-hidden="true">1</span>
+                        <div class="step-content">
+                            <h3>Set up your profile</h3>
+                            <p>Add your important information to the app. It stays private and secure.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step-number" aria-hidden="true">2</span>
+                        <div class="step-content">
+                            <h3>Share your QR code</h3>
+                            <p>The app gives you a QR code. In an emergency, someone nearby scans it with their phone.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step-number" aria-hidden="true">3</span>
+                        <div class="step-content">
+                            <h3>They see how to help you</h3>
+                            <p>Your information tells them what you need so they can get you the right help.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="why-join" aria-labelledby="why-heading">
+            <div class="container">
+                <h2 id="why-heading">Why Bystander by 119?</h2>
+                <ul class="benefits">
+                    <li>Free to use — no cost to you.</li>
+                    <li>Works like a digital alert, right on your phone.</li>
+                    <li>You control your information. You choose what to share.</li>
+                    <li>Your information is private and secure.</li>
+                    <li>Made by BeEnabled — a company that designs accessibility for everybody.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="signup" aria-labelledby="form-heading">
+            <div class="container">
+                <div class="form-card">
+                    <h2 id="form-heading">Join the Waitlist</h2>
+                    <p class="form-intro">Sign up for early access to Bystander by 119.</p>
+
+                    <p class="required-notice">Fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.</p>
+
+                    <form id="waitlist-form">
+                        <fieldset>
+                            <legend class="sr-only">Waitlist signup</legend>
+
+                            <div class="form-group">
+                                <label for="name">Name <span class="optional">(optional)</span></label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    autocomplete="name"
+                                    placeholder="Jane Doe"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email address <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    autocomplete="email"
+                                    inputmode="email"
+                                    aria-required="true"
+                                    aria-describedby="email-error"
+                                    placeholder="name@example.com"
+                                >
+                                <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone number <span class="optional">(optional)</span></label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    aria-describedby="phone-hint"
+                                    placeholder="(555) 123-4567"
+                                >
+                                <span id="phone-hint" class="field-hint">We will only use this to send you updates about Bystander by 119.</span>
+                            </div>
+
+                            <button type="submit" class="btn-primary">Join the Waitlist</button>
+                        </fieldset>
+                    </form>
+
+                    <div id="success-message" role="status" aria-live="polite" hidden>
+                        <div class="success-inner">
+                            <svg aria-hidden="true" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <h3>You are on the list!</h3>
+                            <p>We will reach out when early access is available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>A product by <strong>BeEnabled</strong></p>
+            <p><a href="https://beenabled.me" target="_blank" rel="noopener noreferrer">Visit beenabled.me<span class="sr-only"> (opens in a new tab)</span></a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
