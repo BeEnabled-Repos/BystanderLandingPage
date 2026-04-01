@@ -66,19 +66,33 @@
             return;
         }
 
-        // Log the submission (no backend)
         const data = {
             name: nameInput.value.trim() || null,
             email: emailInput.value.trim(),
             phone: phoneInput.value.trim() || null,
         };
-        console.log('Waitlist signup:', data);
 
-        // Show success state
-        form.hidden = true;
-        document.querySelector('.form-intro').hidden = true;
-        document.querySelector('.required-notice').hidden = true;
-        successMessage.hidden = false;
-        successMessage.focus();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting…';
+
+        fetch('https://waitlist-api-little-paper-9441.fly.dev/waitlist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then(() => {
+                form.hidden = true;
+                document.querySelector('.form-intro').hidden = true;
+                document.querySelector('.required-notice').hidden = true;
+                successMessage.hidden = false;
+                successMessage.focus();
+            })
+            .catch(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join the Waitlist';
+                alert('Something went wrong. Please try again.');
+            });
     });
 })();
